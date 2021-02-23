@@ -50,30 +50,29 @@ button.requestFullscreen {
 }
 
 button.showSource {
-    background: #4D97FF;
+    background: #7CB1FB;
     color: white;
     border-radius: 12px;
     position: absolute;
-    opacity: 0.7;
     top: 9px;
     right: 84px;
 }
 
 button.loadGamefile {
-    background: transparent;
-    border-radius: 12px;
+    background: #46B26C;
+    color: white;
+    border-radius: 6px;
     position: absolute;
-    opacity: 0.7;
-    top: 9px;
-    left: 84px;
+    top: 5px;
+    right: 156px;
+    height: 34px;
 }
 
 button.editGamefile {
     background: #4D97FF;
     color: white;
-    border-radius: 12px;
+    border-radius: 6px;
     position: absolute;
-    opacity: 1.0;
     top: 5px;
     right: 8px;
     height: 34px;

@@ -9,6 +9,8 @@ $(function(){
     setupLoadGameCommand();
 });
 
+const EDITOR_PLAYER_SWITCH_SELECTOR = 'span.button_outlined-button_2f510';
+
 function setupFullscreenCommand()
 {
     $('button.requestFullscreen').hide();
@@ -26,7 +28,7 @@ function setupFullscreenCommand()
         scratchFrame.requestFullscreen();
     });
     $(window).on("fullscreenchange", function() {
-        $('iframe.scratch').attr('src', function(i, val) { return val; });
+        $('iframe.scratch.embed').attr('src', function(i, val) { return val; });
     });
 }
 
@@ -48,7 +50,7 @@ function setupShowSourceCommand()
 function setupEditGameCommand()
 {
     $('button.editGamefile').hide();
-    $("iframe").on("load", function() {
+    $("iframe.scratch.extend").on("load", function() {
         var $button = $(this).parent().find('button.editGamefile');
         $button.show();
     });
@@ -63,10 +65,12 @@ function setupEditGameCommand()
 function setupLoadGameCommand()
 {
     $('button.loadGamefile').hide();
-    $("iframe").on("load", function() {
+    $("iframe.scratch.extend").on("load", function() {
         var $button = $(this).parent().find('button.loadGamefile');
         $button.show();
-        $(this.contentWindow.document).find('span.button_outlined-button_2f510').click();
+        // switch to player
+        $(this.contentWindow.document).find(EDITOR_PLAYER_SWITCH_SELECTOR).click();
+        $(this.contentWindow.document).find(EDITOR_PLAYER_SWITCH_SELECTOR).hide();
     });
 
     $('button.loadGamefile').click(function() {
