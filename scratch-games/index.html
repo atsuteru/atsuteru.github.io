@@ -7,6 +7,11 @@
         <link rel="stylesheet" href="style.css?v=1.0"/>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="index.js"></script>
+        <script type="text/javascript">
+            if(location.protocol == 'http:') {
+              location.replace(location.href.replace(/http:/, 'https:'));
+            }
+        </script>
     </head>
     <body>
         <header>
@@ -22,9 +27,21 @@
                     allowtransparency="true" 
                     frameborder="0" scrolling="no" allowfullscreen></iframe>
             </div>
-    </section>
+        </section>
+        <section>
+            <h2>あなたのゲームをつくろう - 拡張プラットフォーム</h2>
+            <div>
+                <button class="loadGamefile" >&#x1f4d6;ゲームを読み込む</button>
+                <button class="requestFullscreen" >&#x1f532;全画面</button>
+                <button class="editGamefile" >&#x270d;ゲームを編集する</button>
+                <iframe class="scratch" 
+                    src="//atsuteru.github.io/scratch-gui/" 
+                    allowtransparency="true" 
+                    frameborder="0" scrolling="no" allowfullscreen></iframe>
+            </div>
+        </section>
         <footer>
-            <small>version 20210222.0015</small>
+            <small>version 20210223.1340</small>
         </footer>
     </body>
 </html>
