@@ -31,9 +31,19 @@ h1,h2,h3,h4,h5 {
 
 section > div {
     width: fit-content;
-    margin: auto;
+    margin: 0 auto 24px auto;
     position: relative;
 }
+
+section > details {
+    margin: 0 auto 8px auto;
+    width: 485px;
+}
+
+section a:link { color: #99aaff; }
+section a:visited { color: #99aaff; }
+section a:hover { color: #99aaff; }
+section a:active { color: #99aaff; }
 
 iframe.scratch {
     display: block;
@@ -78,9 +88,9 @@ button.editGamefile {
     height: 34px;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 600px) {
     body > * {
-        width: 800px;
+        width: 600px;
     }
     iframe.scratch {
         width: 485px;
@@ -88,20 +98,20 @@ button.editGamefile {
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
     body > * {
         width: 100%;
     }
 }
 
-@media screen and (max-width: 800px) and (orientation: portrait) {
+@media screen and (max-width: 600px) and (orientation: portrait) {
     iframe.scratch {
         width: 100vw;
         height: 83vw;
     }
 }
 
-@media screen and (max-width: 800px) and (orientation: landscape) {
+@media screen and (max-width: 600px) and (orientation: landscape) {
     iframe.scratch {
         width: 120vh;
         height: 100vh;
