@@ -30,7 +30,7 @@ h1,h2,h3,h4,h5 {
 }
 
 section > div {
-    width: fit-content;
+    width: 485px;
     margin: 0 auto 24px auto;
     position: relative;
 }
@@ -89,7 +89,7 @@ button.editGamefile {
 }
 
 @media screen and (min-width: 600px) {
-    body > * {
+    body.page > * {
         width: 600px;
     }
     iframe.scratch {
@@ -99,7 +99,7 @@ button.editGamefile {
 }
 
 @media screen and (max-width: 600px) {
-    body > * {
+    body.page > * {
         width: 100%;
     }
 }
