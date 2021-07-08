@@ -1,0 +1,124 @@
+/**
+ * ページ全体のスタイル
+**/
+body {
+    margin: 0px;
+    padding: 12px;
+}
+
+header {
+    margin: 0px auto 12px auto;
+    padding: 12px 0 0 0;
+    text-align: center;
+    border-bottom: 3px #5B98FF solid;
+}
+
+section {
+    margin: auto;
+    padding: 12px 0;
+    width: 509px;
+    float: left;
+}
+
+section > div {
+  margin: 0 12px 24px 12px;
+  position: relative;
+  background-color: #EBF1FD;
+  border-radius: 8px;
+}
+
+footer {
+    margin: 12px auto 0px auto;
+    padding: 0px;
+    text-align: right;
+    width: 100%;
+    float: left;
+}
+
+/**
+ * 見出し文のスタイル
+**/
+h1,h2,h3,h4,h5 {
+    margin: 0;
+}
+
+/**
+ * リンクテキストのスタイル
+**/
+a:link { color: #99aaff; }
+a:visited { color: #99aaff; }
+a:hover { color: #B099FF; font-weight: bold; }
+a:active { color: #99aaff; }
+
+/**
+ * ゲーム画面のスタイル
+**/
+iframe.scratch {
+    display: block;
+    margin: auto;
+    border-radius: 8px;
+    width: 485px;
+    height: 402px;
+}
+
+button.requestFullscreen {
+    background: transparent;
+    border-radius: 12px;
+    position: absolute;
+    opacity: 0.7;
+    top: 9px;
+    left: 84px;
+}
+
+button.loadGamefile {
+    background: #46B26C;
+    color: white;
+    border-radius: 6px;
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    height: 34px;
+}
+
+/**
+ * 表のスタイル
+**/
+table {
+    width: 100%;
+    border: 1px solid #aaa;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 6px;
+  }
+  table thead th,
+  table tbody th,
+  table tbody td {
+    padding: 0.5em;
+    border-bottom: 1px solid #aaa;
+  }
+  table thead th {
+    background-color: #ddd;
+  }
+  table tbody th {
+    background-color: #eee;
+  }
+  table thead th + th,
+  table tbody td {
+    border-left: 1px solid #aaa;
+  }
+  table tbody tr:last-child th,
+  table tbody tr:last-child td {
+    border-bottom: none;
+  }
+  table thead tr:first-child th:first-child {
+    border-radius: 5px 0 0 0;
+  }
+  table thead tr:first-child th:last-child {
+    border-radius: 0 5px 0 0;
+  }
+  table tbody tr:last-child th:first-child {
+    border-radius: 0 0 0 5px;
+  }
+  table tbody tr:last-child th:last-child {
+    border-radius: 0 0 5px 0;
+  }

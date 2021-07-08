@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,user-scalable=no"/>
+        <title>kami_teru's project</title>
+        <link rel="stylesheet" href="index.css?v=1.0"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="index.js"></script>
+        <script type="text/javascript">
+            if(location.protocol == 'http:') {
+              location.replace(location.href.replace(/http:/, 'https:'));
+            }
+        </script>
+    </head>
+    <body style="background-color: #FCFCFC; color: #585E76;">
+        <header>
+            <h1>kami_teru's project</h1>
+        </header>
+        <section>
+            <h3>ゲーム画面</h3>
+            <div>
+                <button class="requestFullscreen" >&#x1f532;全画面</button>
+                <button class="loadGamefile" >&#x1f4d5;ゲームを読み込む</button>
+                <iframe class="scratch extend" 
+                    src="//atsuteru.github.io/scratch-gui/" 
+                    allowtransparency="true" 
+                    frameborder="0" scrolling="no" allowfullscreen></iframe>
+            </div>
+        </section>
+        <section>
+            <h3>ゲームの始め方</h3>
+            <div>
+                <ol style="padding-top: 1em;padding-bottom: 1em;">
+                    <li>ゲームの一覧 からゲームファイルをダウンロードします。</li>
+                    <li>「ゲームを読み込む」をクリックして、ダウンロードした<br/>ゲームファイルを選択します。</li>
+                    <li>緑の旗をクリックすると、ゲームが始まります。</li>
+                    <li>「全画面」をクリックすると、全画面モードで遊べます。</li>
+                </ol>
+            </div>
+        </section>
+        <section>
+            <h3>ゲームの一覧</h3>
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ゲーム名</th><th>ゲームファイル名<br/>(クリックでダウンロード)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ふうせんショット</td>
+                            <td><a href="ふうせんショット.sb3" download="ふうせんショット.sb3">ふうせんショット.sb3</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <footer>
+            <small>version 1.0</small>
+        </footer>
+    </body>
+</html>
