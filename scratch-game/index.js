@@ -7,8 +7,6 @@ $(function(){
     setupLoadGameCommand();
 });
 
-const EDITOR_PLAYER_SWITCH_SELECTOR = 'span.button_outlined-button_2f510';
-
 function setupFullscreenCommand()
 {
     $('button.requestFullscreen').hide();
@@ -37,8 +35,10 @@ function setupLoadGameCommand()
         var $button = $(this).parent().find('button.loadGamefile');
         $button.show();
         // switch to player
-        $(this.contentWindow.document).find(EDITOR_PLAYER_SWITCH_SELECTOR).click();
-        $(this.contentWindow.document).find(EDITOR_PLAYER_SWITCH_SELECTOR).hide();
+        var editorPlayerSwitch = $(this.contentWindow.document).find('img[title="全画面表示"]').parent().parent();
+        editorPlayerSwitch.click();
+        var switchs = $(this.contentWindow.document).find("span." + editorPlayerSwitch.attr('class').split(' ')[0]);
+        switchs.hide();
     });
 
     $('button.loadGamefile').click(function() {
@@ -54,6 +54,6 @@ function setupLoadGameCommand()
         event = scratchFrame.contentWindow.document.createEvent("MouseEvents");
         event.initEvent("mouseup", true, true);
         fileMenu.dispatchEvent(event);
-        $(scratchFrame.contentWindow.document).find('li.menu_menu-item_3ELPx:contains("コンピューターから読み込む")').click();
+        $(scratchFrame.contentWindow.document).find('li:contains("コンピューターから読み込む")').click();
     });
 }
